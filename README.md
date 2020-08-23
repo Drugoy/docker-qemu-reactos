@@ -11,7 +11,7 @@ docker run --detach \
   --privileged --env QEMU_KVM=true \
   hectormolinero/qemu-reactos:latest
 ```
-> The instance will be available through a web browser from: http://localhost:6080/vnc_auto.html
+> The instance will be available through a web browser from: http://localhost:6080/vnc.html
 
 ## Environment variables
 #### `QEMU_CPU`
@@ -28,6 +28,15 @@ VM disk format (`qcow2` by default).
 
 #### `QEMU_KEYBOARD`
 VM keyboard layout (`en-us` by default).
+
+#### `QEMU_NET_DEVICE`
+VM network device (`e1000` by default).
+
+#### `QEMU_BOOT_ORDER`
+VM boot order (`cd` by default).
+
+#### `QEMU_BOOT_MENU`
+VM boot menu (`off` by default).
 
 #### `QEMU_KVM`
 Start QEMU in KVM mode (`false` by default).
